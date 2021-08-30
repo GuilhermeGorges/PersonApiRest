@@ -22,4 +22,3 @@ São necessários os seguintes pré-requisitos para a execução do projeto
 * Maven 3.6.3 ou versões superiores.
 =======
 * Maven 3.6.3 ou versões superiores.
->>>>>>> af75a3fa4b8997f94d54406afc4d8373504bb17d
