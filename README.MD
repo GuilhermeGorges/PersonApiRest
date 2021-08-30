@@ -18,4 +18,8 @@ http://localhost:8080/api/v1/people
 São necessários os seguintes pré-requisitos para a execução do projeto
 
 * Java 11 ou versões superiores.
+<<<<<<< HEAD
 * Maven 3.6.3 ou versões superiores.
+=======
+* Maven 3.6.3 ou versões superiores.
+>>>>>>> af75a3fa4b8997f94d54406afc4d8373504bb17d
