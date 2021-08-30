@@ -1,4 +1,4 @@
-package com.guilherme.personapi.dto;
+package com.guilherme.personapi.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
