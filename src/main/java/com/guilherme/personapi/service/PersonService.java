@@ -3,6 +3,7 @@ package com.guilherme.personapi.service;
 import com.guilherme.personapi.dto.request.PersonDTO;
 import com.guilherme.personapi.dto.response.MessageResponseDTO;
 import com.guilherme.personapi.entity.Person;
+import com.guilherme.personapi.exception.PersonNotFoundExceptio;
 import com.guilherme.personapi.mapper.PersonMapper;
 import com.guilherme.personapi.repository.PersonRepository;
 import lombok.AllArgsConstructor;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -40,5 +42,11 @@ public class PersonService {
         return allPeople.stream()
                 .map(personMapper::toDTO)
                 .collect(Collectors.toList());
+    }
+
+    public PersonDTO findById(Long id) throws PersonNotFoundExceptio {
+        Person person = personRepository.findById(id)
+                .orElseThrow(() ->  new PersonNotFoundExceptio(id));
+        return personMapper.toDTO(person);
     }
 }
